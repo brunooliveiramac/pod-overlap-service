@@ -25,3 +25,11 @@ coverage: ## Generate test coverage in the development environment
 .PHONY: lint
 lint: ## Execute syntactic analysis and autofix minor problems
 	@golangci-lint run --fix
+
+.PHONY: docker-build
+docker-build: ## Build Docker image for pod-overlap-service
+	@docker build -t pod-overlap-service -f Dockerfile .
+
+.PHONY: docker-run
+docker-run: ## Run Docker container locally on port 8080
+	@docker run -p 8080:8080 pod-overlap-service
