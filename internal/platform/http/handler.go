@@ -19,7 +19,6 @@ func RequestLogger() gin.HandlerFunc {
 	return gin.Logger()
 }
 
-// overlapHandler handles the /api/overlap endpoint.
 func overlapHandler(c *gin.Context) {
 	var req dto.OverlapRequestDTO
 	if err := c.ShouldBindJSON(&req); err != nil {
