@@ -29,7 +29,7 @@ pod-overlap-service/
 │       ├── http/                #  - RESTful API,handlers, DTOs
 │       │   ├── e2e_test.go      #  - End-to-end tests for the HTTP API, should be small and test quite few happy paths
 │       └── logger/              #  - Logging implementation and configuration
-│       └── dataprovider         #  - Data provider implementation (e.g., database, external APIs) also implements interfaces defined in core logic, so it can be easily mocked in tests keeping the core clean and maintainable from platform concerns.
+│       └── dataprovider         #  - Data provider implementation (database, external APIs) also implements interfaces defined in core logic, so it can be easily mocked in tests keeping the core clean and maintainable from platform concerns.
 ├── Makefile                     # Build and run tasks
 ```
 
